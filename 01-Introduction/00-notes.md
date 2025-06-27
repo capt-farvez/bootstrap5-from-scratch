@@ -16,3 +16,6 @@
 </body>
 </html>
 ```
+
+## Different Screen Sizes using in bootstarp
+![alt text](image.png)
