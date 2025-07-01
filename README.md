@@ -10,6 +10,10 @@ For full reference and detailed usage of all components and utilities, visit the
 - [Bootstrap 5.3 Documentation (Latest)](https://getbootstrap.com/docs/5.3)
 
 ## Projects
-### EMS (Employee Management System)
+### 01. EMS (Employee Management System)
 - [Live Demo](https://ems2-0.netlify.app/)
 - [Source Code](https://github.com/capt-farvez/bootstrap5-from-scratch/tree/main/Projects/01-EMS)
+
+### 02. Blog App
+- [Live Demo](https://blog-app-2.netlify.app/)
+- [Source Code](https://github.com/capt-farvez/bootstrap5-from-scratch/tree/main/Projects/02-Blog-App)
