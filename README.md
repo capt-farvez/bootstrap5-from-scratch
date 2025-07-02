@@ -19,7 +19,5 @@ For full reference and detailed usage of all components and utilities, visit the
 - [Source Code](https://github.com/capt-farvez/bootstrap5-from-scratch/tree/main/Projects/02-Blog-App)
 
 ### 03. EdTech
-> Note: In progress – not yet complete.
-
 - [Live Demo](https://ed-tech.netlify.app/)
 - [Source Code](https://github.com/capt-farvez/bootstrap5-from-scratch/tree/main/Projects/03-EdTech)
