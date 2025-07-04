@@ -295,13 +295,6 @@ a {
 }
 
 
-.main-content {
-    transition: margin-left 0.3s ease-in-out;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
 .header {
     background: #fff;
     padding: 1rem;
@@ -370,6 +363,7 @@ a {
 }
 
 /* Table functionality */
+
 .table th {
     color: #006400;
     font-weight: 500;
@@ -430,7 +424,9 @@ input[required] ~ label::after {
 
     .main-content {
         margin-left: 0 !important;
-        padding-bottom: 60px; /* Add padding to avoid content being hidden by mobile nav */
+        padding-bottom: 40px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     /* Show mobile nav and hide desktop sidebar */
@@ -469,5 +465,27 @@ input[required] ~ label::after {
 
     .user-name {
         display: none;
+    }
+
+    /* Global tables */
+    .table-responsive {
+        position: absolute;
+        margin-top: 2.5rem;
+        left: 0;     /* remove left space */
+        right: 0;
+    }
+    
+    .p-4 {
+       padding: 1.5rem 0 1.5rem !important;
+    }
+
+    /* Order Management Page */
+    .order-card {
+        padding: 1.5rem;
+        margin:1rem;
+    }
+
+    .drop-down-filter {
+        margin: 3rem 1rem 0 0;
     }
 }
