@@ -339,7 +339,7 @@ a {
     height: 60px;
     background-color: var(--bg-primary-700);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     z-index: 1030;
     width: auto;
@@ -407,6 +407,8 @@ a {
     /* Show mobile nav and hide desktop sidebar */
     .mobile-nav {
         display: flex !important;
+        justify-content: center;
+        align-items: center;
     }
 
     .sidebar {
