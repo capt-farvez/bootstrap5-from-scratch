@@ -19,11 +19,32 @@
     
 </head>
 <body>
+    <!-- Alert Wrapper (centered and top-positioned) -->
+    <div class="position-fixed top-0 start-50 translate-middle-x w-100 d-flex justify-content-center mt-3" style="z-index: 1055; pointer-events: none;">
+        <div class="w-50">
+            <!-- Success Alert -->
+            <div class="alert alert-success alert-dismissible fade show d-none" id="successAlert" role="alert" style="pointer-events: auto;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="mb-0">Logged in Successfully</p>
+                    <button type="button" class="btn-close ms-3" onclick="this.closest('.alert').remove();" aria-label="Close"></button>
+                </div>
+            </div>
+            <!-- Info Alert -->
+            <div class="alert alert-info alert-dismissible fade show d-none" id="infoAlert" role="alert" style="pointer-events: auto;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="mb-0">Logging in...</p>
+                    <button type="button" class="btn-close ms-3" onclick="this.closest('.alert').remove();" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Contents -->
     <div class="container-fluid login-page d-flex align-items-center min-vh-100">
         <div class="row flex-grow-1 w-100">
             <!-- Left column (Carousel)  -->
             <div class="left-column col-xl-8 d-none d-xl-flex align-items-center justify-content-center vh-100">
-                <div class="login-info-container p-5 d-flex align-items-center justify-content-center">
+                <div class="login-info-container d-flex flex-column justify-content-center align-items-center p-5" style="width:55%; height:600px;">
                     <div
                         id="infoCarousel"
                         class="carousel carousel-dark slide w-100"
@@ -92,7 +113,7 @@
 
             <!-- Right Column (Login Form)-->
             <div class="right-column col-xl-4 col-12 d-flex align-items-center justify-content-center vh-100">
-                <div class="login-form-container bg-opacity-70 backdrop-blur-md d-flex flex-column align-items-cente">
+                <div class="login-form-container bg-opacity-70 backdrop-blur-md d-flex flex-column">
                     <div class="text-center mb-4">
                         <img
                             src="./images/chef_logo.png"
@@ -102,9 +123,9 @@
                         <div class="login-form-title ">BSS RESTAURANT</div>
                     </div>
 
-                    <form action="#" >
+                    <form id="loginForm">
                         <div class="mb-3">
-                            <label for="username" class="form-label">Username</label>
+                            <label for="username" class="form-label login-text-input-label">Username</label>
                             <input
                                 type="email"
                                 class="form-control login-text-input-field"
@@ -116,7 +137,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
+                            <label for="password" class="form-label login-text-input-label ">Password</label>
                             <input
                                 type="password"
                                 class="form-control login-text-input-field"
@@ -144,5 +165,40 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const successAlert = document.getElementById('successAlert');
+        const infoAlert = document.getElementById('infoAlert');
+
+        function showAlert(alertElement) {
+            alertElement.classList.remove('d-none');
+        }
+
+        function hideAlert(alertElement) {
+            alertElement.classList.add('d-none');
+        }
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            showAlert(infoAlert); // Show "Logging in..."
+
+            // Simulate async login check
+            setTimeout(() => {
+                hideAlert(infoAlert);
+
+                // Simulate success (you can add real validation here)
+                const isLoginSuccessful = true;
+
+                    if (isLoginSuccessful) {
+                        showAlert(successAlert);
+
+                        setTimeout(() => {
+                        window.location.href = '#'; // Redirect to targeted page
+                        }, 1000);
+                    }
+                }, 3000
+            );
+        });
+    </script>
 </body>
 </html>
