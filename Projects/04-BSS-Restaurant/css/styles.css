@@ -168,6 +168,10 @@ a {
     transition: width 0.3s ease-in-out;
     overflow-x: hidden;
     flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .sidebar.collapsed {
@@ -184,6 +188,8 @@ a {
     justify-content: center;
     height: 80px;
     background: rgba(255, 255, 255, 0.2);
+    margin: 0px 0px 12px 0px;
+    position: relative; /* Added for absolute positioning of children */
 }
 
 .sidebar .logo-img {
@@ -193,15 +199,6 @@ a {
     transition: all 0.3s ease-out;
 }
 
-.sidebar.collapsed .logo-img {
-    /* transform: scale(0.8); */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    
-}
-
 .sidebar .logo-text {
     font-size: 16px;
     font-weight: 700;
@@ -209,7 +206,7 @@ a {
     letter-spacing: 2px;
     text-shadow: #2e7d32 2px 0px 0px, #2e7d32 1.75517px .958851px 0px, #2e7d32 1.0806px 1.68294px 0px, #2e7d32 .141474px 1.99499px 0px, #2e7d32 -.832294px 1.81859px 0px, #2e7d32 -1.60229px 1.19694px 0px, #2e7d32 -1.97998px .28224px 0px, #2e7d32 -1.87291px -.701566px 0px, #2e7d32 -1.30729px -1.5136px 0px, #2e7d32 -.421592px -1.95506px 0px, #2e7d32 .567324px -1.91785px 0px, #2e7d32 1.41734px -1.41108px 0px, #2e7d32 1.92034px -.558831px 0px;
     opacity: 1;
-    transition: opacity 0.075s ease-out;
+    transition: opacity 0.075s ease-out, width 0.3s ease-in-out;
     white-space: nowrap;
     margin-top: 1rem;
     margin-right: 25px;
@@ -266,6 +263,13 @@ a {
     width: 0;
 }
 
+.main-content {
+    transition: margin-left 0.3s ease-in-out;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .logout-button {
     height: 52px;
     background: var(--bg-ternary-light);
@@ -282,7 +286,7 @@ a {
 }
 
 .logout-button:hover {
-    background: #C8E6C9;
+    background: #e7d3ad;
 }
 
 .sidebar.collapsed .logout-button .nav-text {
@@ -331,6 +335,12 @@ a {
     margin-right: 1rem;
 }
 
+#content {
+    flex-grow: 1; /* Allow content to take remaining height */
+    overflow-y: auto;
+    overflow-x: auto; /* Enable scrolling for content */
+}
+
 .mobile-nav {
     position: fixed;
     bottom: 0;
@@ -342,21 +352,22 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 1030;
-    width: auto;
+    gap: 1rem;
 }
 
 .mobile-nav .nav-link {
     color: white;
     font-size: 1.2rem;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .mobile-nav .nav-link.active {
-    color: #ffc107;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000; 
 }
-
 
 /* Table functionality */
 .table th {
@@ -383,6 +394,24 @@ a {
     -webkit-text-stroke: 0;        /* Remove border */
 }
 
+/* Modals */
+label.required::before {
+    content: "* ";
+    color: red;
+    margin-left: 4px;
+}
+
+/* Target label before a required input */
+input[required] ~ label::after {
+    content: " *";
+    color: red;
+    margin-left: 4px;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
 
 /* Mobile styles for max-width: 768px (Bootstrap's md breakpoint) */
 @media (max-width: 768px) {
@@ -407,8 +436,10 @@ a {
     /* Show mobile nav and hide desktop sidebar */
     .mobile-nav {
         display: flex !important;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 
     .sidebar {
@@ -421,9 +452,13 @@ a {
 
     .header {
         display: flex;
-        justify-content: space-between;
+        justify-content: center !important;
+        position: absolute;
+        align-items: center;
+        width: 100%;
+        z-index: 1000;
     }
-
+    
     .header .menu-bar {
         display: none;
     }

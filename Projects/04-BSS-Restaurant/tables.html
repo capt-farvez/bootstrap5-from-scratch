@@ -114,76 +114,70 @@
                         <table class="table table-hover">
                             <thead class="table-light">
                                 <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col" class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Name">Name</th>
-                                    <th scope="col"></th>
-                                    <th scope="col"class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Email">Email</th>
-                                    <th scope="col" class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Designation">Designation</th>
-                                    <th scope="col" class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Join Date">Join Date</th>
-                                    <th scope="col" class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Name">Phone</th>
+                                    <th scope="col" class="custom-table-title"></th>
+                                    <th scope="col" class="custom-table-title">Table Number</th>
+                                    <th scope="col" class="custom-table-title">Total Seats</th>
+                                    <th scope="col" class="custom-table-title">Booking Status</th>
+                                    <th scope="col" class="custom-table-title">Assigned Employees</th>
                                     <th scope="col">
-                                        <button class="btn btn-outline-success"> 
+                                        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addTableModal"> 
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add me-2" viewBox="0 0 16 16">
                                                     <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
                                                     <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
                                                 </svg>
-                                            </span>Add Employee
+                                            </span>Add new table
                                         </button>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><img src="https://randomuser.me/api/portraits/men/1.jpg" class="rounded-circle" width="40"/></td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Anowar">Anowar </td>
-                                    <td>
-                                        <!-- Star Checkbox -->
-                                        <div class="form-check star-toggle">
-                                            <input class="form-check-input d-none" type="checkbox" id="goldStar">
-                                            <label class="form-check-label" for="goldStar">
-                                                <i class="bi bi-star"></i>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="anowar@gmail.com">anowar@gmail.com</td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="NA">NA</td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="2025-07-07">2025-07-07</td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="01512365478">01512365478</td>
-                                    <td>
-                                        <a class="btn btn-light trash-box" href="#" role="button">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-                                                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="https://randomuser.me/api/portraits/men/1.jpg" class="rounded-circle" width="40"/></td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="Anowar">Anowar </td>
-                                    <td>
-                                        <!-- Star Checkbox -->
-                                        <div class="form-check star-toggle">
-                                            <input class="form-check-input d-none" type="checkbox" id="goldStar">
-                                            <label class="form-check-label" for="goldStar">
-                                                <i class="bi bi-star"></i>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="anowar@gmail.com">anowar@gmail.com</td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="NA">NA</td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="2025-07-07">2025-07-07</td>
-                                    <td class="text-nowrap" data-bs-toggle="tooltip" data-bs-placement="top" title="01512365478">01512365478</td>
-                                    <td>
-                                        <a class="btn btn-light trash-box" href="#" role="button">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
-                                                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
-                                            </svg>
-                                        </a>
-                                    </td>
-                                </tr>
+                <td>
+                    <div class="d-flex justify-content-center">
+                        <img src="https://restaurantapi.bssoln.com/images/table/default.jpg" alt="Table Image" class="rounded-circle" width="52" height="52">
+                    </div>
+                </td>
+                <td>T1</td>
+                <td>4</td>
+                <td>Available</td>
+                <td>
+                    <div class="d-flex gap-1 flex-wrap">
+                        <!-- Employee Avatars will go here -->
+                        <button class="btn btn-outline-success rounded-circle add-employee-to-table-button">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex justify-content-center">
+                        <img src="https://restaurantapi.bssoln.com/images/table/default.jpg" alt="Table Image" class="rounded-circle" width="52" height="52">
+                    </div>
+                </td>
+                <td>T2</td>
+                <td>6</td>
+                <td>Occupied</td>
+                <td>
+                    <div class="d-flex gap-1 flex-wrap">
+                        <!-- Employee Avatars will go here -->
+                        <button class="btn btn-outline-success rounded-circle add-employee-to-table-button">
+                            <i class="bi bi-plus"></i>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -194,6 +188,46 @@
 
 
     <!----------  Modalas ----------->
+
+    <!-- Add Table Modal -->
+    <div class="modal fade" id="addTableModal" tabindex="-1" aria-labelledby="addTableModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTableModalLabel">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                            </svg>
+                        </span>
+                        Add New Table
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="tableNumber" class="form-label">Table Number</label>
+                            <input type="text" class="form-control" id="tableNumber" placeholder="Table Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="numberOfSeats" class="form-label">Number of Seats</label>
+                            <input type="number" class="form-control" id="numberOfSeats" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tableImage" class="form-label">Table Image</label>
+                            <input type="file" class="form-control" id="tableImage" accept="image/*">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel Operation</button>
+                    <button type="button" class="btn btn-primary">Add New Table</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Profile modal -->
     <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -238,8 +272,8 @@
     </div>
 
     <nav class="mobile-nav d-md-none">
-        <a href="employees.html" class="nav-link active" data-page="employees"><i class="bi bi-person-vcard"></i></a>
-        <a href="tables.html" class="nav-link" data-page="tables"><i class="bi bi-table"></i></a>
+        <a href="employees.html" class="nav-link" data-page="employees"><i class="bi bi-person-vcard"></i></a>
+        <a href="tables.html" class="nav-link active" data-page="tables"><i class="bi bi-table"></i></a>
         <a href="foods.html" class="nav-link" data-page="foods"><i class="bi bi-egg-fried"></i></a>
         <a href="new-orders.html" class="nav-link" data-page="new-order"><i class="bi bi-plus-square"></i></a>
         <a href="orders.html" class="nav-link" data-page="orders"><i class="bi bi-list-ol"></i></a>
