@@ -21,3 +21,7 @@ For full reference and detailed usage of all components and utilities, visit the
 ### 03. EdTech
 - [Live Demo](https://ed-tech.netlify.app/)
 - [Source Code](https://github.com/capt-farvez/bootstrap5-from-scratch/tree/main/Projects/03-EdTech)
+
+### 04. BSS Restaurant
+- [Live Demo](https://bss-rms.netlify.app//)
+- [Source Code](https://github.com/capt-farvez/bootstrap5-from-scratch/tree/main/Projects/04-BSS-Restaurant)
