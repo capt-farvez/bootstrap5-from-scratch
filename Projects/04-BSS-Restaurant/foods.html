@@ -122,9 +122,13 @@
                                     <th scope="col" class="custom-table-title">Discount</th>
                                     <th scope="col" class="custom-table-title">Discounted Price</th>
                                     <th scope="col" class="custom-table-title-button">
-                                        <button class="btn btn-success add-food-button">
-                                            <i class="bi bi-plus-circle"></i>
-                                            <span>Add Food Item</span>
+                                        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addFoodModal"> 
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle me-2" viewBox="0 0 16 16">
+                                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                                </svg>
+                                            </span>Add Food Item
                                         </button>
                                     </th>
                                 </tr>
@@ -133,7 +137,7 @@
                                 <tr>
                                     <td>
                                         <div class="d-flex justify-content-center">
-                                            <img src="https://restaurantapi.bssoln.com/images/food/default.jpg" alt="Food Image" class="rounded-circle" width="52" height="52">
+                                            <img src="./images/food.jpg" alt="Food Image" class="rounded-circle" width="52" height="52">
                                         </div>
                                     </td>
                                     <td>Pizza</td>
@@ -142,15 +146,20 @@
                                     <td>10%</td>
                                     <td>14.39</td>
                                     <td>
-                                        <button class="btn btn-sm btn-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
+                                        <div class="d-flex justify-content-center">
+                                            <a class="btn btn-light shadow-sm trash-box" href="#" role="button">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <div class="d-flex justify-content-center">
-                                            <img src="https://restaurantapi.bssoln.com/images/food/default.jpg" alt="Food Image" class="rounded-circle" width="52" height="52">
+                                            <img src="./images/food.jpg" alt="Food Image" class="rounded-circle" width="52" height="52">
                                         </div>
                                     </td>
                                     <td>Burger</td>
@@ -159,9 +168,14 @@
                                     <td>2</td>
                                     <td>6.99</td>
                                     <td>
-                                        <button class="btn btn-sm btn-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
+                                        <div class="d-flex justify-content-center">
+                                            <a class="btn btn-light shadow-sm trash-box" href="#" role="button">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -175,6 +189,79 @@
 
 
     <!----------  Modalas ----------->
+
+    <!-- Add Food Modal -->
+    <!-- Add Food Modal -->
+<div class="modal fade" id="addFoodModal" tabindex="-1" aria-labelledby="addFoodModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addFoodModalLabel"><i class="bi bi-plus-circle"></i> Add New Food Item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="mb-3">
+                                <label for="foodName" class="form-label">Food Name</label>
+                                <input type="text" class="form-control" id="foodName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+                            <div class="file-upload-container text-center border p-4 rounded">
+                                <label for="foodImage" class="form-label d-block">
+                                    <i class="bi bi-plus-circle-fill" style="font-size: 3rem;"></i>
+                                    <div>Upload Food Image</div>
+                                </label>
+                                <input type="file" class="form-control d-none" id="foodImage" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12 col-lg-3">
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="number" class="form-control" id="price" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="mb-3">
+                                <label for="discountType" class="form-label">Discount Type</label>
+                                <select class="form-select" id="discountType">
+                                    <option value="None">None</option>
+                                    <option value="Flat">Flat</option>
+                                    <option value="Percentage">Percentage</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="mb-3">
+                                <label for="discountAmount" class="form-label">Discount In</label>
+                                <input type="number" class="form-control" id="discountAmount" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="mb-3">
+                                <label for="discountedPrice" class="form-label">Discounted Price</label>
+                                <input type="number" class="form-control" id="discountedPrice" placeholder="0" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel Operation</button>
+                <button type="button" class="btn btn-primary">Add New Food Item</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Profile modal -->
     <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

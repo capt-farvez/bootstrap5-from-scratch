@@ -387,13 +387,27 @@ a {
 
 .table th {
     color: #006400;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     position: relative;
     text-align: left;
     background: #fafafa;
     border-left: #000;
+    vertical-align: middle;
+}
 
+table td {
+    vertical-align: middle;
+}
+
+th:not(:first-child)::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 1.5em;
+    background-color: #ddd;
+    margin-right: 0.5rem;
+    vertical-align: middle;
 }
 
 .trash-box:hover {
@@ -413,6 +427,147 @@ a {
     color: gold;                   /* Gold fill */
     -webkit-text-stroke: 0;        /* Remove border */
 }
+
+
+/* Table specific styles */
+.custom-table-title {
+    font-size: 18px;
+    color: darkgreen;
+}
+
+.custom-table-title-button {
+    padding: 8px 10px;
+}
+
+.add-employee-to-table-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #2e7d32; /* Using --bg-primary-700 */
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    background: var(--bg-ternary-light);
+}
+
+.add-employee-to-table-button:hover {
+    background: #fafafa; /* Equivalent to --bg-secondary-light-100 */
+}
+
+/* New Order specific styles */
+.new-order-container {
+    height: 230;
+}
+
+.table-card {
+    width: 100%;
+    min-width: 100px;
+    height: 230px;
+    border-radius: 5px;
+    border: 5px solid green;
+}
+
+.table-card:hover {
+    background: var(--bg-ternary-light);
+    cursor: pointer;
+}
+
+.table-card.active {
+    background: var(--bg-ternary-light);
+    transition: none !important;
+}
+
+.table-image {
+    height: 100%;
+    width: 100%;
+    max-width: 180px;
+    object-fit: cover;
+}
+
+.table-image-container {
+    height: 150px;
+    width: 80%;
+}
+
+.table-select-card {
+    background-color: rgb(247, 247, 247);
+    margin: 20px;
+}
+
+.table-select-svg {
+    margin: 20px ;
+}
+
+.cart-button-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+}
+
+.cart-button {
+    height: 50px;
+    width: 50px;
+    background: white;
+    border: 1px solid var(--bg-ternary-light);
+    border-radius: 8px;
+    font-size: 32px;
+    color: #00230b;
+}
+
+.cart-button:hover {
+    background: #fafafa;
+}
+
+/* Orders specific styles */
+.order-container {
+    min-height: calc(100vh - 85px);
+}
+
+.order-card {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.order-item-container {
+    min-height: inherit;
+}
+
+.food-image-container {
+    min-height: 72px;
+    max-height: 100px;
+    min-width: 72px;
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-card-body {
+    min-height: 250px;
+    max-height: 350px;
+}
+
+.drop-down-filter {
+    width: 155px;
+    height: 52px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0; /* Equivalent to var(--bg-secondary-light-100) */
+    background-color: white;
+}
+
+#orderStatusDropdown1,
+#orderStatusDropdown2 {
+    height: 50px;
+}
+
 
 /* Modals */
 label.required::before {
@@ -513,5 +668,16 @@ input[required] ~ label::after {
 
     .drop-down-filter {
         margin: 3rem 1rem 0 0;
+    }
+
+    .new-order-container {
+        height: 230;
+        margin-top: 2rem;
+    }
+
+    .cart-button-wrapper {
+        position: absolute;
+        top: 50%;
+        right: 5%;
     }
 }

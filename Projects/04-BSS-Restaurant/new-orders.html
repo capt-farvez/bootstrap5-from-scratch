@@ -110,135 +110,57 @@
             <!-- Contents -->
             <div id="content" class="p-4">
                 <div class="main-wrapper p-0 p-md-4 pb-md-0">
-    <div class="bg-white drop-shadow-lg md:rounded-lg rounded-none new-order-container">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <!-- Select a Table Section -->
-                <div class="col-12 col-xxl-3 h-100 overflow-auto border-end border-green-100">
-                    <div class="sticky-top d-flex align-items-center bg-white mt-3 h-12">
-                        <div class="text-xl text-center w-100">SELECT A TABLE (Static Count)</div>
+                    <div class="bg-white drop-shadow-lg md:rounded-lg rounded-none new-order-container">
+                        <div class="container-fluid h-100">
+                            <div class="row h-100">
+                                <!-- Select a Table Section -->
+                                <div class="col-12 col-xxl-3 h-100 overflow-auto border-end border-green-100">
+                                    <div class="sticky-top d-flex align-items-center bg-white mt-3 h-12">
+                                        <div class="text-xl text-center w-100">SELECT A TABLE ()</div>
+                                    </div>
+                                    <div class="d-flex flex-row flex-xxl-column justify-content-center gap-3 p-4 pt-0 overflow-auto">
+                                        <!-- Table Card -->
+                                        <div class="table-card d-flex flex-column justify-content-center align-items-center border border-success rounded-md shadow-md" data-table-id="1">
+                                            <div class="table-image-container d-flex justify-content-center">
+                                                <img src="./images/table.jpg" alt="Table Image" class="table-image rounded-lg drop-shadow-lg">
+                                            </div>
+                                            <div class="text-xl text-center mt-2">TABLE 1 </div>
+                                        </div>
+                                    </div>
+                                    <!-- table select card -->
+                                    <div class="table-select-card d-flex flex-column justify-content-center align-items-center rounded-md shadow-md">
+                                        <div class="table-select-svg d-flex justify-content-center ">
+                                            <img src="./images/login_illustration_1.svg" width="200" alt="">
+                                        </div>
+                                        <p style="font-size: larger;">Select a Table First</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex flex-row flex-xxl-column justify-content-center gap-3 p-4 pt-0 overflow-auto">
-                        <!-- Table Card -->
-                        <div class="table-card d-flex flex-column justify-content-center align-items-center border border-success rounded-md shadow-md" data-table-id="1">
-                            <div class="table-image-container d-flex justify-content-center">
-                                <img src="assets/table.jpg" alt="Table Image" class="table-image rounded-lg drop-shadow-lg">
-                            </div>
-                            <div class="text-xl text-center mt-2">T1 <span class="text-lg text-center">(4 Seats)</span></div>
+
+                    <div class="cart-button-wrapper">
+                        <button class="btn btn-light cart-button position-relative drop-shadow-md" data-bs-toggle="offcanvas" data-bs-target="#cartOffCanvas">
+                            <i class="bi bi-cart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0 <span class="visually-hidden">items in cart</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Cart Offcanvas -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffCanvas" aria-labelledby="cartOffCanvasLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="cartOffCanvasLabel">Your Cart</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
-                        <div class="table-card d-flex flex-column justify-content-center align-items-center border border-success rounded-md shadow-md" data-table-id="2">
-                            <div class="table-image-container d-flex justify-content-center">
-                                <img src="assets/table.jpg" alt="Table Image" class="table-image rounded-lg drop-shadow-lg">
-                            </div>
-                            <div class="text-xl text-center mt-2">T2 <span class="text-lg text-center">(6 Seats)</span></div>
-                        </div>
-                        <div class="table-card d-flex flex-column justify-content-center align-items-center border border-success rounded-md shadow-md" data-table-id="3">
-                            <div class="table-image-container d-flex justify-content-center">
-                                <img src="assets/table.jpg" alt="Table Image" class="table-image rounded-lg drop-shadow-lg">
-                            </div>
-                            <div class="text-xl text-center mt-2">T3 <span class="text-lg text-center">(2 Seats)</span></div>
+                        <div class="offcanvas-body">
+                            <p>No items in cart.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Add Food to Cart Section -->
-                <div class="col-12 col-xxl-9 h-100 overflow-auto position-relative p-0">
-                    <div id="warning-table-banner" class="h-100 warning-table-banner position-relative rounded-lg d-flex flex-column justify-content-center align-items-center z-1">
-                        <div class="drop-shadow-md text-gray-700 animate-pulse" style="font-size: 48px">
-                            <div class="img-fluid w-52">
-                                <img src="assets/select_table.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="mt-0 text-2xl mt-2 text-gray-700">
-                            Select A Table First!
-                        </div>
-                    </div>
-
-                    <div id="food-list-section" class="d-none">
-                        <div class="sticky-top d-flex align-items-center justify-content-between bg-white mt-0 h-16">
-                            <div class="text-xl text-start ps-4">ADD FOOD TO CART (Static Count)</div>
-                            <div class="pe-4">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search Food">
-                                    <button class="btn btn-primary" type="button"><i class="bi bi-search"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column justify-content-center gap-3 p-4 pt-0">
-                            <!-- Food Card -->
-                            <div class="food-card w-100 border border-success rounded-md shadow-md p-4">
-                                <div class="d-flex gap-4 flex-row align-items-center h-100">
-                                    <div class="food-image-container">
-                                        <img src="assets/login_assets/food_image.png" alt="Food Image" class="food-image rounded-lg drop-shadow-lg">
-                                    </div>
-                                    <div class="d-flex h-100 flex-column justify-content-between pt-2 pb-3 w-100">
-                                        <div>
-                                            <div class="text-2xl text-start font-semibold">Pizza</div>
-                                            <div class="text-lg text-start font-medium">Delicious Italian Pizza</div>
-                                        </div>
-                                        <div class="d-flex flex-row w-100 justify-content-between">
-                                            <div>
-                                                <div class="text-xl line-through text-danger">Price - 15.99৳</div>
-                                                <div class="text-2xl text-success">Price - 14.39৳!</div>
-                                            </div>
-                                            <div>
-                                                <button class="btn btn-success add-to-cart-button">Add To Cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="food-card w-100 border border-success rounded-md shadow-md p-4">
-                                <div class="d-flex gap-4 flex-row align-items-center h-100">
-                                    <div class="food-image-container">
-                                        <img src="assets/login_assets/food_image.png" alt="Food Image" class="food-image rounded-lg drop-shadow-lg">
-                                    </div>
-                                    <div class="d-flex h-100 flex-column justify-content-between pt-2 pb-3 w-100">
-                                        <div>
-                                            <div class="text-2xl text-start font-semibold">Burger</div>
-                                            <div class="text-lg text-start font-medium">Classic Beef Burger</div>
-                                        </div>
-                                        <div class="d-flex flex-row w-100 justify-content-between">
-                                            <div>
-                                                <div class="text-2xl text-dark">Price - 8.99৳</div>
-                                            </div>
-                                            <div>
-                                                <button class="btn btn-success add-to-cart-button">Add To Cart</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </main>
         </div>
-    </div>
-
-    <div class="cart-button-wrapper">
-        <button class="btn btn-light cart-button position-relative drop-shadow-md" data-bs-toggle="offcanvas" data-bs-target="#cartOffCanvas">
-            <i class="bi bi-cart"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                0 <span class="visually-hidden">items in cart</span>
-            </span>
-        </button>
-    </div>
-
-    <!-- Cart Offcanvas -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffCanvas" aria-labelledby="cartOffCanvasLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="cartOffCanvasLabel">Your Cart</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <!-- Cart items will be dynamically added here -->
-            <p>No items in cart.</p>
-        </div>
-    </div>
-            </div>
-        </main>
-    </div>
 
 
     <!----------  Modalas ----------->

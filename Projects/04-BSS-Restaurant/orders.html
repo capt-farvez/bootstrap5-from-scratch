@@ -109,146 +109,164 @@
 
             <!-- Contents -->
             <div id="content" class="p-4">
-<div class="main-wrapper pb-0 relative">
-    <div class="order-container h-100 position-relative">
-        <div class="container-fluid order-item-container p-4 pt-0">
-            <div class="d-flex justify-content-end align-items-center w-100 h-20">
-                <div class="dropdown">
-                    <button class="btn btn-light dropdown-toggle drop-down-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Filter Orders
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#" data-filter="All">All</a></li>
-                        <li><a class="dropdown-item" href="#" data-filter="Pending">Pending</a></li>
-                        <li><a class="dropdown-item" href="#" data-filter="Confirmed">Confirmed</a></li>
-                        <li><a class="dropdown-item" href="#" data-filter="Preparing">Preparing</a></li>
-                        <li><a class="dropdown-item" href="#" data-filter="Prepared To Serve">Prepared To Serve</a></li>
-                        <li><a class="dropdown-item" href="#" data-filter="Served">Served</a></li>
-                        <li><a class="dropdown-item" href="#" data-filter="Paid">Paid</a></li>
-                    </ul>
-                </div>
-            </div>
+                <div class="main-wrapper pb-0 relative">
+                    <div class="order-container h-100 position-relative">
+                        <div class="container-fluid order-item-container p-4 pt-0">
+                            <div class="d-flex justify-content-end align-items-center w-100 h-20">
+                                <div class="dropdown">
+                                    <button class="btn btn-light dropdown-toggle drop-down-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Filter Orders
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#" data-filter="All">All</a></li>
+                                        <li><a class="dropdown-item" href="#" data-filter="Pending">Pending</a></li>
+                                        <li><a class="dropdown-item" href="#" data-filter="Confirmed">Confirmed</a></li>
+                                        <li><a class="dropdown-item" href="#" data-filter="Preparing">Preparing</a></li>
+                                        <li><a class="dropdown-item" href="#" data-filter="Prepared To Serve">Prepared To Serve</a></li>
+                                        <li><a class="dropdown-item" href="#" data-filter="Served">Served</a></li>
+                                        <li><a class="dropdown-item" href="#" data-filter="Paid">Paid</a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
-            <!-- Order Cards -->
-            <div class="row g-3 g-md-3 g-xl-4 gy-0">
-                <div class="col-12 col-xl-6 col-xxl-4">
-                    <div class="order-card bg-white shadow rounded-md">
-                        <div class="row order-card-header d-flex p-4 pb-2">
-                            <div class="col-8 p-0">
-                                <div class="text-xl truncate">ORD-001</div>
-                                <div class="text-lg text-gray-700 text-opacity-70">2023-10-26 14:30</div>
-                            </div>
-                            <div class="col-4 d-flex gap-2 justify-content-end">
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="orderStatusDropdown1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Edit
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="orderStatusDropdown1">
-                                        <li><a class="dropdown-item" href="#">Pending</a></li>
-                                        <li><a class="dropdown-item" href="#">Confirmed</a></li>
-                                        <li><a class="dropdown-item" href="#">Preparing</a></li>
-                                        <li><a class="dropdown-item" href="#">Prepared To Serve</a></li>
-                                        <li><a class="dropdown-item" href="#">Served</a></li>
-                                        <li><a class="dropdown-item" href="#">Paid</a></li>
-                                    </ul>
-                                </div>
-                                <button class="btn btn-sm btn-danger">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <hr class="h-[2px] bg-gray-400 border-0 dark:bg-gray-700">
-                        <div class="order-card-body overflow-auto p-4 pt-0">
-                            <div class="d-flex gap-3 mt-4 w-100">
-                                <div class="food-image-container">
-                                    <img src="https://restaurantapi.bssoln.com/images/food/default.jpg" alt="Food Image" class="food-image rounded-lg drop-shadow-lg">
-                                </div>
-                                <div class="d-flex flex-column w-100">
-                                    <div class="text-lg text-slate-800 text-opacity-90">Pizza</div>
-                                    <div class="d-flex justify-content-between w-100">
-                                        <div class="text-md text-slate-800 text-opacity-70">14.39 ৳</div>
-                                        <div class="text-md text-slate-800 text-opacity-70">QTY. 1</div>
+                            <!-- Order Cards -->
+                            <div class="row g-3 g-md-3 g-xl-4 gy-0">
+                                <div class="col-12 col-xl-6 col-xxl-4">
+                                    <div class="order-card bg-white shadow rounded-md">
+                                        <div class="row order-card-header d-flex p-4 pb-2">
+                                            <div class="col-8 p-0">
+                                                <div class="text-xl truncate">ORD-001</div>
+                                                <div class="text-lg text-gray-700 text-opacity-70">2023-10-26 14:30</div>
+                                            </div>
+                                            <div class="col-4 d-flex gap-2 justify-content-end">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="orderStatusDropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="orderStatusDropdown1">
+                                                        <li><a class="dropdown-item" href="#">Pending</a></li>
+                                                        <li><a class="dropdown-item" href="#">Confirmed</a></li>
+                                                        <li><a class="dropdown-item" href="#">Preparing</a></li>
+                                                        <li><a class="dropdown-item" href="#">Prepared To Serve</a></li>
+                                                        <li><a class="dropdown-item" href="#">Served</a></li>
+                                                        <li><a class="dropdown-item" href="#">Paid</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="d-flex justify-content-center">
+                                                    <a class="btn btn-light shadow-sm trash-box" href="#" role="button">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr style="border: 0; height: 2px; background: gray;">
+                                        <div class="order-card-body overflow-auto p-4 pt-0">
+                                            <div class="d-flex gap-3 mt-4 w-100">
+                                                <div class="food-image-container">
+                                                    <img src="./images/food.jpg" alt="Food Image" class="food-image rounded-lg drop-shadow-lg">
+                                                </div>
+                                                <div class="d-flex flex-column w-100">
+                                                    <div class="text-lg text-slate-800 text-opacity-90">Pizza</div>
+                                                    <div class="d-flex justify-content-between w-100">
+                                                        <div class="text-md text-slate-800 text-opacity-70">14.39 ৳</div>
+                                                        <div class="text-md text-slate-800 text-opacity-70">QTY. 1</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between p-2 ps-3 pe-3">
+                                            <div class="d-flex flex-column">
+                                                <div class="text-md text-slate-800 text-opacity-70">Total Quantity: <span class="font-bold text-md md:text-lg">2</span></div>
+                                                <div class="text-md md:text-xl text-slate-800 text-opacity-70">Total Amount (৳): <span class="font-bold text-md md:text-xl underline decoration-sky-500/30">23.38৳</span></div>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-end">
+                                                <div class="text-sm md:text-md text-slate-800 text-opacity-70 text-success">
+                                                    Paid
+                                                </div>
+                                                <div class="text-lg md:text-2xl text-slate-800 text-opacity-70">
+                                                    T1
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between p-2 ps-3 pe-3">
-                            <div class="d-flex flex-column">
-                                <div class="text-md text-slate-800 text-opacity-70">Total Quantity: <span class="font-bold text-md md:text-lg">2</span></div>
-                                <div class="text-md md:text-xl text-slate-800 text-opacity-70">Total Amount (৳): <span class="font-bold text-md md:text-xl underline decoration-sky-500/30">23.38৳</span></div>
-                            </div>
-                            <div class="d-flex flex-column align-items-end">
-                                <div class="text-sm md:text-md text-slate-800 text-opacity-70 text-success">
-                                    Paid
-                                </div>
-                                <div class="text-lg md:text-2xl text-slate-800 text-opacity-70">
-                                    T1
+                                <div class="col-12 col-xl-6 col-xxl-4">
+                                    <div class="order-card bg-white shadow rounded-md">
+                                        <div class="row order-card-header d-flex p-4 pb-2">
+                                            <div class="col-8 p-0">
+                                                <div class="text-xl truncate">ORD-002</div>
+                                                <div class="text-lg text-gray-700 text-opacity-70">2023-10-26 15:00</div>
+                                            </div>
+                                            <div class="col-4 d-flex gap-2 justify-content-end">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="orderStatusDropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="orderStatusDropdown2">
+                                                        <li><a class="dropdown-item" href="#">Pending</a></li>
+                                                        <li><a class="dropdown-item" href="#">Confirmed</a></li>
+                                                        <li><a class="dropdown-item" href="#">Preparing</a></li>
+                                                        <li><a class="dropdown-item" href="#">Prepared To Serve</a></li>
+                                                        <li><a class="dropdown-item" href="#">Served</a></li>
+                                                        <li><a class="dropdown-item" href="#">Paid</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="d-flex justify-content-center">
+                                                    <a class="btn btn-light shadow-sm trash-box" href="#" role="button">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                                            <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr style="border: 0; height: 2px; background: gray;">
+                                        <div class="order-card-body overflow-auto p-4 pt-0">
+                                            <div class="d-flex gap-3 mt-4 w-100">
+                                                <div class="food-image-container">
+                                                    <img src="./images/food.jpg" alt="Food Image" class="food-image rounded-lg drop-shadow-lg">
+                                                </div>
+                                                <div class="d-flex flex-column w-100">
+                                                    <div class="text-lg text-slate-800 text-opacity-90">Salad</div>
+                                                    <div class="d-flex justify-content-between w-100">
+                                                        <div class="text-md text-slate-800 text-opacity-70">10.00 ৳</div>
+                                                        <div class="text-md text-slate-800 text-opacity-70">QTY. 1</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between p-2 ps-3 pe-3">
+                                            <div class="d-flex flex-column">
+                                                <div class="text-md text-slate-800 text-opacity-70">Total Quantity: <span class="font-bold text-md md:text-lg">1</span></div>
+                                                <div class="text-md md:text-xl text-slate-800 text-opacity-70">Total Amount (৳): <span class="font-bold text-md md:text-xl underline decoration-sky-500/30">10.00৳</span></div>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-end">
+                                                <div class="text-sm md:text-md text-slate-800 text-opacity-70 text-warning">
+                                                    Pending
+                                                </div>
+                                                <div class="text-lg md:text-2xl text-slate-800 text-opacity-70">
+                                                    T2
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xl-6 col-xxl-4">
-                    <div class="order-card bg-white shadow rounded-md">
-                        <div class="row order-card-header d-flex p-4 pb-2">
-                            <div class="col-8 p-0">
-                                <div class="text-xl truncate">ORD-002</div>
-                                <div class="text-lg text-gray-700 text-opacity-70">2023-10-26 15:00</div>
-                            </div>
-                            <div class="col-4 d-flex gap-2 justify-content-end">
-                                <div class="dropdown">
-                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="orderStatusDropdown2" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Edit
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="orderStatusDropdown2">
-                                        <li><a class="dropdown-item" href="#">Pending</a></li>
-                                        <li><a class="dropdown-item" href="#">Confirmed</a></li>
-                                        <li><a class="dropdown-item" href="#">Preparing</a></li>
-                                        <li><a class="dropdown-item" href="#">Prepared To Serve</a></li>
-                                        <li><a class="dropdown-item" href="#">Served</a></li>
-                                        <li><a class="dropdown-item" href="#">Paid</a></li>
-                                    </ul>
-                                </div>
-                                <button class="btn btn-sm btn-danger">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <hr class="h-[2px] bg-gray-400 border-0 dark:bg-gray-700">
-                        <div class="order-card-body overflow-auto p-4 pt-0">
-                            <div class="d-flex gap-3 mt-4 w-100">
-                                <div class="food-image-container">
-                                    <img src="https://restaurantapi.bssoln.com/images/food/default.jpg" alt="Food Image" class="food-image rounded-lg drop-shadow-lg">
-                                </div>
-                                <div class="d-flex flex-column w-100">
-                                    <div class="text-lg text-slate-800 text-opacity-90">Salad</div>
-                                    <div class="d-flex justify-content-between w-100">
-                                        <div class="text-md text-slate-800 text-opacity-70">10.00 ৳</div>
-                                        <div class="text-md text-slate-800 text-opacity-70">QTY. 1</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between p-2 ps-3 pe-3">
-                            <div class="d-flex flex-column">
-                                <div class="text-md text-slate-800 text-opacity-70">Total Quantity: <span class="font-bold text-md md:text-lg">1</span></div>
-                                <div class="text-md md:text-xl text-slate-800 text-opacity-70">Total Amount (৳): <span class="font-bold text-md md:text-xl underline decoration-sky-500/30">10.00৳</span></div>
-                            </div>
-                            <div class="d-flex flex-column align-items-end">
-                                <div class="text-sm md:text-md text-slate-800 text-opacity-70 text-warning">
-                                    Pending
-                                </div>
-                                <div class="text-lg md:text-2xl text-slate-800 text-opacity-70">
-                                    T2
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
             </div>
         </main>
     </div>
