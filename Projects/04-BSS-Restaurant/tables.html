@@ -218,23 +218,32 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="mb-3">
-                            <label for="tableNumber" class="form-label">Table Number</label>
-                            <input type="text" class="form-control" id="tableNumber" placeholder="Table Number" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="numberOfSeats" class="form-label">Number of Seats</label>
-                            <input type="number" class="form-control" id="numberOfSeats" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="tableImage" class="form-label">Table Image</label>
-                            <input type="file" class="form-control" id="tableImage" accept="image/*">
+                        <div class="row mb-4">
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-4">
+                                    <label for="tableNumber" class="form-label required"> Table Number</label>
+                                    <input type="text" class="form-control" id="tableNumber" placeholder="Table Number">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="numsOfSeat" class="form-label required">Numbers of Seats</label>
+                                    <input type="text" class="form-control" id="numsOfSeat" placeholder="Number of seats in the table">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center dashed-border"  >
+                                <div class="file-upload-container text-center dashed-border p-4 rounded">
+                                    <label for="imageUpload" class="form-label d-block">
+                                        <i class="bi bi-plus" style="font-size: 1.5rem;"></i>
+                                        <div>Upload Table Image</div>
+                                    </label>
+                                    <input type="file" class="form-control d-none" id="imageUpload" accept="image/*">
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel Operation</button>
-                    <button type="button" class="btn btn-primary">Add New Table</button>
+                    <button type="button" class="btn trash-box shadow-sm" data-bs-dismiss="modal">Cancel Operation</button>
+                    <button type="button" class="btn btn-outline-success shadow-sm">Add New Table</button>
                 </div>
             </div>
         </div>
