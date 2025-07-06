@@ -120,7 +120,7 @@
                         <div class="container-fluid h-100">
                             <div class="row h-100">
                                 <!-- Select a Table Section -->
-                                <div class="col-12 col-xxl-3 h-100 overflow-auto border-end border-green-100">
+                                <div class="col-12 col-xxl-12 h-100 overflow-auto border-end border-green-100">
                                     <div class="sticky-top d-flex align-items-center bg-white mt-3 h-12">
                                         <div class="text-xl text-center w-100">SELECT A TABLE ()</div>
                                     </div>
@@ -146,10 +146,11 @@
                     </div>
 
                     <div class="cart-button-wrapper">
-                        <button class="btn btn-light cart-button position-relative drop-shadow-md" data-bs-toggle="offcanvas" data-bs-target="#cartOffCanvas">
+                        <button class="btn btn-light cart-button position-relative shadow-sm drop-shadow-md" data-bs-toggle="offcanvas" data-bs-target="#cartOffCanvas">
                             <i class="bi bi-cart"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                0 <span class="visually-hidden">items in cart</span>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                style="font-size: 1rem; padding: 4px 8px; border: 2px solid white;">
+                                <small>0</small> <span class="visually-hidden">items in cart</span>
                             </span>
                         </button>
                     </div>

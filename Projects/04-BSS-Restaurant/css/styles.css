@@ -155,6 +155,18 @@ a {
     color: black;
 }
 
+.form-check-input:checked{
+    accent-color: #157347;
+    background-color: #157347;
+    border-color: #157347;
+}
+
+.form-check-input:focus{
+    accent-color: #157347;
+    background-color: #157347;
+    border-color: #157347;
+}
+
 /* text‑inputs refinements */
 .login-text-input-label {
     font-size: 20px;
@@ -218,6 +230,7 @@ a {
     object-fit: contain;
     transition: all 0.3s ease-out;
     /* position: absolute; */
+    padding-left: 2rem;
 
 }
 .sidebar.collapsed .logo-img {
@@ -226,6 +239,7 @@ a {
     object-fit: contain;
     transition: all 0.3s ease-out;
     position: absolute;
+    padding-left: 0;
 }
 
 .sidebar .logo-text {
@@ -252,11 +266,16 @@ a {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    padding: 12px 15px;
+    padding: 15px 15px;
     margin: 5px 0;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     overflow: hidden;
+    margin-left: 10px;
+}
+
+.sidebar.collapsed .nav-link {
+    margin-left: 0;
 }
 
 .sidebar .nav-link.active {
@@ -275,11 +294,13 @@ a {
     font-size: 1.2rem;
     margin-right: 1rem;
     transition: margin-right 0.3s ease-in-out;
+    padding-left: 1rem;
 }
 
 .sidebar.collapsed .nav-link i {
     margin-right: 0;
     margin-left: 1rem;
+    padding-left: 0;
 }
 
 .nav-text {
@@ -316,6 +337,13 @@ a {
 
 .logout-button:hover {
     background: #e7d3ad;
+}
+
+.sidebar.collapsed .logout-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
 }
 
 .sidebar.collapsed .logout-button .nav-text {
