@@ -362,8 +362,9 @@ a {
     flex-grow: 1; /* Allow content to take remaining height */
     overflow-y: auto;
     overflow-x: auto; /* Enable scrolling for content */
-    /* background-color: #c8e6c9 ; */
+    /* background-color: #e0e7e0 ; */
     /* background-color: #212529; */
+    background-color: var(--bg-ternary-light);
 }
 
 
@@ -397,6 +398,12 @@ a {
     color: #000; 
 }
 
+/* Card */
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /* Table functionality */
 /* This button used for add and confirm buttons */
 .btn-outline-success {
@@ -423,12 +430,15 @@ a {
     position: relative;
     text-align: left;
     background: #fafafa;
-    border-left: #000;
     vertical-align: middle;
 }
 
 table td {
     vertical-align: middle;
+}
+
+table td.rounded-circle {
+    display: none;
 }
 
 th:not(:first-child)::before {
