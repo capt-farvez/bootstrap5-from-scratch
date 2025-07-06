@@ -634,6 +634,23 @@ textarea::placeholder {
     border-radius: 5px;
 }
 
+/* .truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%;
+  display: block; 
+} */
+
+tr.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%; 
+  display: block;
+}
+
+
 /* Mobile styles for max-width: 768px (Bootstrap's md breakpoint) */
 @media (max-width: 768px) {
     .sidebar {
