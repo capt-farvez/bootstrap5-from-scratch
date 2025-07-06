@@ -8,11 +8,27 @@
     /* brand palette */
     --green-50: #e6feed;
     --green-600: #2e7d32;
-    --text-dark-primary: #212529;
-    --text-dark-secondary: #5a5a5a;
-    --bg-ternary-light: #f9f9f9;
-    --bg-primary-700: #2e7d32;
+    /* --text-dark-primary: #212529; */
+    /* --text-dark-secondary: #5a5a5a; */
+    /* --bg-ternary-light: #f9f9f9; */
+    /* --bg-primary-700: #2e7d32; */
     /* --bg-primary-700: #c8e6c9 ; */
+    --bg-primary-400: #66bb6a;
+    --bg-primary-600: #43a047;
+    --bg-primary-700: #388e3c;
+    --bg-secondary-light: #E8ECE7;
+    --bg-secondary-light-100: #C8E6C9;
+    --bg-ternary-light: #F1FAF5;
+    --text-primary: white;
+    --text-dark-primary: #424242;
+    --text-dark-secondary: #616161;
+    --bg-warning-50: #ffebee;
+    --bg-warning-100: #ffcdd2;
+    --bg-warning-200: #ef9a9a;
+    --bg-warning-300: #e57373;
+    --bg-warning-400: #ef5350;
+    --bg-warning-600: #e53935;
+    --bg-warning-700: #ff1744;
 }
 
 html,
@@ -245,6 +261,7 @@ a {
 
 .sidebar .nav-link.active {
     background-color: var(--bg-ternary-light);
+    /* background-color: #c8e6c9 ; */
     color: var(--text-dark-primary);
     padding: 12px;
 }
@@ -345,7 +362,8 @@ a {
     flex-grow: 1; /* Allow content to take remaining height */
     overflow-y: auto;
     overflow-x: auto; /* Enable scrolling for content */
-    background-color: #c8e6c9 ;
+    /* background-color: #c8e6c9 ; */
+    /* background-color: #212529; */
 }
 
 
@@ -383,6 +401,8 @@ a {
 /* This button used for add and confirm buttons */
 .btn-outline-success {
     transition: all 0.2s ease-in-out;
+    background: var(--bg-ternary-light);
+    font-size: 18px;
 }
 
 .btn-outline-success:hover {
@@ -684,6 +704,10 @@ textarea::placeholder {
     
     .p-4 {
        padding: 1.5rem 0 1.5rem !important;
+    }
+
+    .h2 {
+        margin-left: 0;
     }
 
     /* Order Management Page */
